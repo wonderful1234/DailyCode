@@ -1,14 +1,11 @@
 ﻿
 #include <iostream>
-#include <rapidjson/document.h>
-#include <rapidjson/istreamwrapper.h>
 #include <fstream>
-using namespace rapidjson;
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
 using namespace std;
 int main()
 {
-	ifstream ifs("test.json");
-	IStreamWrapper isw(ifs);
-	Document d;
-	d.ParseStream(isw);
+	std::ifstream f("example.json");
+	//json data = json::parse(f);
 }
